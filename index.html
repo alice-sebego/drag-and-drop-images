@@ -16,7 +16,7 @@
         <h1>Crée-toi une collection d'images</h1>
     </header>
     <section id="img-generator">
-        <div id="images-store" draggable="true">
+        <div id="images-store" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
 
         </div>
         <div id="trash-can">
