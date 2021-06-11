@@ -1,13 +1,32 @@
 // Elements of DOM
-
-const $images = document.querySelector(".images");
+const $imagesStore = document.querySelector("#images-store");
+let $image = document.querySelector(".image");
 const $trashCan = document.querySelector("#trash-can");
 const $imgSelected = document.querySelectorAll(".imgSelected");
 
 // Add images on images store
 let indexPicture = 1;
 
-$images.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
+$image.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
+
+// Handle collection of images
+let collection = [];
+$imgSelected.forEach(img => collection.push(img));
+
+/**
+ * Add a new picture on the div - Images Stores - 
+ * when the previous image has been dropped on collection
+ */
+const newPicture = () => {
+
+    const newImg = document.createElement("div");
+    newImg.setAttribute("class", "image");
+    newImg.setAttribute("draggable", "true");
+    indexPicture ++ ;
+    newImg.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
+    $imagesStore.appendChild(newImg);
+
+}
 
 // Build drag's events
 
@@ -45,6 +64,7 @@ document.addEventListener("drop", e => {
         e.target.style.backgroundColor = "";
         dragged.parentNode.removeChild(dragged);
         e.target.appendChild(dragged)
+        newPicture()
     }
 
 }, false);
