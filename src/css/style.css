@@ -26,10 +26,23 @@ header{
 #images-store,
 #trash-can,
 .imgSelected{
+    flex-shrink: 0;
     width: 30%;
     height: 35vh;
     border: 1px solid #aaa;
     border-radius: .5em;
+}
+
+.images{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0 auto;
+    background-color: red;
+    width: 99%;
+    height: 99%;
+    cursor: pointer;
 }
 
 #trash-can{
