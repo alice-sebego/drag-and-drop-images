@@ -1,8 +1,13 @@
 // Elements of DOM
 
-const $images = document.querySelector("#images");
+const $images = document.querySelector(".images");
 const $trashCan = document.querySelector("#trash-can");
 const $imgSelected = document.querySelectorAll(".imgSelected");
+
+// Add images on images store
+let indexPicture = 1;
+
+$images.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
 
 // Build drag's events
 
