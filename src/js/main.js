@@ -60,6 +60,9 @@ document.addEventListener("drop", e => {
     
     e.preventDefault();
 
+    if(e.target.className === "images-store"){
+        return;
+    }
     if(e.target.className === "imgSelected"){
         e.target.style.backgroundColor = "";
         dragged.parentNode.removeChild(dragged);
