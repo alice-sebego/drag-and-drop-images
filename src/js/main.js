@@ -74,6 +74,7 @@ document.addEventListener("drop", e => {
         e.target.style.backgroundColor = "";
         dragged.parentNode.removeChild(dragged);
         e.target.appendChild(dragged)
+        dragged.setAttribute("draggable", "false");
         newPicture()
     }
 
