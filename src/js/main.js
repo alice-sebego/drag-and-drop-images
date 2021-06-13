@@ -7,11 +7,12 @@ const $imgSelected = document.querySelectorAll(".imgSelected");
 // Add images on images store
 let indexPicture = 1;
 
-$image.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
+$image.style.backgroundImage = `url(./assets/pexels-${indexPicture}.jpg)`;
 
 // Handle collection of images
 let collection = [];
 $imgSelected.forEach(img => collection.push(img));
+//collection.push($trashCan);
 
 /**
  * Add a new picture on the div - Images Stores - 
@@ -23,7 +24,9 @@ const newPicture = () => {
     newImg.setAttribute("class", "image");
     newImg.setAttribute("draggable", "true");
     indexPicture ++ ;
-    newImg.style.backgroundImage = `url(https://loremflickr.com/320/240?random=${indexPicture})`;
+    newImg.style.backgroundImage = `url(./assets/pexels-${indexPicture}.jpg)`;
+
+//assets\pexels-1.jpg
     $imagesStore.appendChild(newImg);
 
 }
@@ -63,6 +66,12 @@ document.addEventListener("drop", e => {
     if(e.target.className === "images-store"){
         return;
     }
+
+    // if(e.target.getAttribute("id") === "trash-can"){
+    //     dragged.remove();
+    //     newPicture();
+    // }
+
     if(e.target.className === "imgSelected"){
         e.target.style.backgroundColor = "";
         dragged.parentNode.removeChild(dragged);

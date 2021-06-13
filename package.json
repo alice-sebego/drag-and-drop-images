@@ -1,0 +1,23 @@
+{
+  "name": "drag-and-drop-images",
+  "version": "1.0.0",
+  "description": "Create an app that allows us drag and drop images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alice-sebego/drag-and-drop-images.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alice-sebego/drag-and-drop-images/issues"
+  },
+  "homepage": "https://github.com/alice-sebego/drag-and-drop-images#readme",
+  "dependencies": {
+    "js-cookie": "^2.2.1"
+  }
+}
