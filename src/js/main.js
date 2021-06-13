@@ -12,7 +12,7 @@ $image.style.backgroundImage = `url(./assets/pexels-${indexPicture}.jpg)`;
 // Handle collection of images
 let collection = [];
 $imgSelected.forEach(img => collection.push(img));
-//collection.push($trashCan);
+collection.push($trashCan);
 
 /**
  * Add a new picture on the div - Images Stores - 
@@ -25,8 +25,6 @@ const newPicture = () => {
     newImg.setAttribute("draggable", "true");
     indexPicture ++ ;
     newImg.style.backgroundImage = `url(./assets/pexels-${indexPicture}.jpg)`;
-
-//assets\pexels-1.jpg
     $imagesStore.appendChild(newImg);
 
 }
@@ -67,10 +65,10 @@ document.addEventListener("drop", e => {
         return;
     }
 
-    // if(e.target.getAttribute("id") === "trash-can"){
-    //     dragged.remove();
-    //     newPicture();
-    // }
+    if(e.target.getAttribute("id") === "trash-can"){
+        dragged.remove();
+        newPicture();
+    }
 
     if(e.target.className === "imgSelected"){
         e.target.style.backgroundColor = "";
