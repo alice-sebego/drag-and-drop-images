@@ -60,6 +60,40 @@ header{
     justify-content: center;
 }
 
+footer{
+    margin-top: 5vh;
+    padding: 2vh 2vw;
+    box-shadow: -.1em 0 .5em rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+footer a{
+    color: #333;
+}
+
+footer a:hover,
+footer a:active,
+footer a:focus{
+    text-decoration: 2px rgb(182, 31, 31) underline;
+}
+
+#github::before{
+    content: "</>";
+}
+
+#twitter::before{
+    content: "#";
+}
+
+#github::before,
+#twitter::before{
+    font-weight: bold;
+    color: rgb(182, 31, 31);
+    font-size: larger;
+}
+
+/* Responsive display management */
 @media (max-width: 656px) {
     
     #img-generator, #collection{
@@ -76,7 +110,6 @@ header{
     }
 }
 
-/* Responsive display management */
 @media (max-width: 485px) {
     
     h1{
