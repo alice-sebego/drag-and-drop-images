@@ -1,3 +1,12 @@
+/**
+ * Handle user's collection of selected images on the DOM
+ * @class HandleCollection
+ * @param {HTMLDivElement} imgStore
+ * @param {HTMLDivElement} image
+ * @param {HTMLDivElement} trashcan
+ * @param {HTMLAllCollection} imgSelected
+ * @param {Array} collection
+ */
 export default class HandleCollection{
 
     indexPicture = 1;

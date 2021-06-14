@@ -1,6 +1,11 @@
 import HandleCollection from './handle-collection.js';
 import * as dom from './dom-elements.js';
 
+/**
+ * Handle all events related to drag and drop
+ * @class HandleEvent
+ * @param {Array} selection
+ */
 export default class HandleEvent{
     
     dragged;
