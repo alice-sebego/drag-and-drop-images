@@ -45,14 +45,15 @@ export default class HandleCollection{
         newImg.style.backgroundImage = `url(./assets/pexels-${this.indexPicture}.jpg)`;
         this.currentPicture = `url(./assets/pexels-${this.indexPicture}.jpg)`;
         this.imgStore.appendChild(newImg);
-        console.log(this.imgStore);
     }
 
-    emptySelect(){
+    noMoreSelect(){
+
         if(this.indexPicture > 25){
             setTimeout(()=>{
                 alert("Il n'y a plus de photos à sélectionner")
             }, 500)
         }
+
     }
 }

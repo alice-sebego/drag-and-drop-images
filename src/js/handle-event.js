@@ -85,7 +85,7 @@ export default class HandleEvent{
             if(e.target.getAttribute("id") === "trash-can"){
                 this.dragged.remove();
                 this.handleCollection.newPicture();
-                this.handleCollection.emptySelect();
+                this.handleCollection.noMoreSelect();
             }
         
             if(e.target.className === "imgSelected"){
@@ -94,7 +94,7 @@ export default class HandleEvent{
                 e.target.appendChild(this.dragged);
                 this.dragged.setAttribute("draggable", "false");
                 this.handleCollection.newPicture();
-                this.handleCollection.emptySelect();
+                this.handleCollection.noMoreSelect();
                 this.selection.push(this.handleCollection.currentPicture);
                 if(this.selection.length === 3){
                     setTimeout(()=>{
