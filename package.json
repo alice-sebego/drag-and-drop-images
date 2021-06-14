@@ -2,9 +2,12 @@
   "name": "drag-and-drop-images",
   "version": "1.0.0",
   "description": "Create an app that allows us drag and drop images",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,12 @@
   },
   "homepage": "https://github.com/alice-sebego/drag-and-drop-images#readme",
   "dependencies": {
-    "js-cookie": "^2.2.1"
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }

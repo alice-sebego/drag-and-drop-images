@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import HandleEvent from "./handle-event.js";
 
 // Store user's selection in a array
